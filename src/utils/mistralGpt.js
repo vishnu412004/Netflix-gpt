@@ -1,5 +1,5 @@
 
-const MISTRAL_API_KEY = "pkISy0IKPOrzV5NkUaTGOWQXbJc27VB8"; // Replace this
+const MISTRAL_API_KEY = process.env.REACT_APP_MISTRAL_API_KEY;
 
 export const queryMistral = async (prompt) => {
   try {
