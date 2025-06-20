@@ -24,9 +24,9 @@ const GptSearchBar = () => {
 
     const userInput = searchText.current.value.trim();
     if (!userInput) return;
-    const prompt = `Act as a Movie Recommendation system. Suggest at least 18 popular movies related to the query: "${userInput}".  
-The movies should come from a variety of languages including Hindi, English, Telugu, Tamil, Kannada, and Malayalam but more Telugu is preferred.If any language is mentioned show more in that language. 
-Only give me the movie names, comma separated, with no extra text or numbering.`;
+    const prompt = `Act as a Movie Recommendation system. Suggest all popular movies related to the query: "${userInput}".  
+The movies should come from a variety of languages including Hindi, English, Telugu, Tamil, Kannada, and Malayalam.If any language is mentioned show more in that language. 
+Only give me the movie names, comma separated, with no extra text or numbering.Just the movie names dont say anything like here are your results.`;
 
     const responseText = await queryMistral(prompt);
     const gptResults = responseText.split(",");
